@@ -1,0 +1,157 @@
+/* Global styles */
+* {
+    padding: 0px;
+    margin: 0px;
+    color: rgb(206, 183, 149);
+
+}
+
+html {
+    background: linear-gradient(
+        to bottom,
+        rgb(10, 10, 10), 
+        #292723
+    );
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    padding: 20px;
+    background-color: #292723;
+}
+
+div {
+    margin: 10px
+}
+
+
+/* Utility Styles */
+.spacer {
+    height: 25px;
+}
+
+.center-items {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Score Board Styles */
+.score-board {
+    background-color: #292723;
+    border: 3px solid rgb(179, 141, 47);
+    text-align: center;
+    width: 300px;
+    height: 75px;
+}
+
+.animation {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes flash {
+    0%, 50%, 100% {
+        background-color: #292723;
+        
+    }
+    25%, 75% {
+        background-color: #979592;
+    } 
+}
+
+.flash {
+    animation-name: flash;
+}
+
+
+/* Game Board Styles */
+.game-board {
+    width: 500px;
+    height: 500px;
+    padding: 5px;
+    background: linear-gradient(
+        to right,
+        red, blue
+    );
+}
+
+.game-box {
+    background-color: #292723;
+    opacity: 0.8;
+    border-radius: 6px;
+    width: 150px;
+    height: 150px;
+    text-align: center; 
+    transition: 0.3s;
+}
+
+.game-box:hover {
+    background-color: #504e4a;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.board-image {
+    width: 125px;
+    height: 125px;
+    opacity: 1;
+}
+
+
+/* Reset button Styles */
+.clear-game-button {
+    border: 3px solid rgb(179, 141, 47) ;
+    width: 200px;
+    height: 100px;
+    font-size: 60px;
+    text-align: center;
+    background-color: rgb(29, 32, 34);
+    transition: 0.3s;
+}
+
+.clear-game-button:hover {
+    background-color: rgb(82, 83, 83);
+    transition: 0.3s;
+}
+
+.clear-game-button:active {
+    background-color: #979592;
+    transition: 0.1s;
+}
+
+
+/* Win Modal Styles */
+.win-alert-modal {
+    z-index: 99;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    border: 4px solid rgb(179, 141, 47);
+    border-radius: 4px;
+    background-color: rgb(29, 32, 34);
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    text-align: right;
+    font-size: 12px;
+}

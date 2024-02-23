@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>        
+        <div class="spacer"></div>
+        <!--    Score Board    -->
+        <div class="center-items">
+            <img class="board-image" src="img/empire.png"/>
+            <table class="score-board">
+                <tr>
+                    <th>Galactic Empire</th>
+                    <th>The Rebellion</th>
+                </tr>
+                <tr>
+                    <td id="score-x" class="">0</td>
+                    <td id="score-o" class="">0</td>
+                </tr>
+            </table>
+            <img  class="board-image" src="img/rebels.png"/>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="center-items">
+            <table class="game-board">
+                <tr>
+                    <td id="t1" class="game-box" onclick="clickedSquare('t1')" data-player=""></td>
+                    <td id="t2" class="game-box" onclick="clickedSquare('t2')" data-player=""></td>
+                    <td id="t3" class="game-box" onclick="clickedSquare('t3')" data-player=""></td>
+                </tr>
+                <tr>
+                    <td id="t4" class="game-box" onclick="clickedSquare('t4')" data-player=""></td>
+                    <td id="t5" class="game-box" onclick="clickedSquare('t5')" data-player=""></td>
+                    <td id="t6" class="game-box" onclick="clickedSquare('t6')" data-player=""></td>
+                </tr>
+                <tr>
+                    <td id="t7" class="game-box" onclick="clickedSquare('t7')" data-player=""></td>
+                    <td id="t8" class="game-box" onclick="clickedSquare('t8')" data-player=""></td>
+                    <td id="t9" class="game-box" onclick="clickedSquare('t9')" data-player=""></td>
+                </tr>
+            </table>
+            <div id="win-modal" class="win-alert-modal hidden">
+                <button onclick="closeModal()">CLOSE</button>
+            </div>
+        </div>
+        
+        <div class="spacer"></div>
+
+        <div class="center-items">
+            <button class="clear-game-button" onclick="clearGameBoard()">RESET</button>
+        </div>
+
+        <script src="functions.js"></script>
+    </body>
+    <footer>ernst games</footer>
+</html>

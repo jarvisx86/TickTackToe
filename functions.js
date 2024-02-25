@@ -50,6 +50,18 @@ function clickedSquare(elementId) {
     checkForWinCondition();
 }
 
+function playSound(soundAsset) {
+    let sound = document.getElementById(soundAsset);
+    sound.play();
+}
+
+function stopSound(soundAsset) {
+    let sound = document.getElementById(soundAsset);
+    console.log("Sound is paused");
+    sound.pause();
+    sound.currentTime = 0;
+}
+
 function checkForWinCondition() {
     // get game board state
     const gameBoardValues = [];

@@ -8,7 +8,7 @@ var xTurn = true;
 const xWinCondition = "XXX";
 const oWinCondition = "OOO";
 
-const empireImg = '<img class="board-image" src="img/empire.png" alt="empire"/>';
+const empireImg = '<img class="board-image" src="img/stormtrooper.png" alt="stormtrooper"/>';
 const rebelsImg = '<img class="board-image" src="img/rebels.png" alt="rebels"/>';
 
 function clearGameBoard() {

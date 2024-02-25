@@ -54,9 +54,8 @@ header audio {
 }
 
 div {
-    margin: 10px
+    margin: 15px
 }
-
 
 /* Utility Styles */
 .spacer {
@@ -173,15 +172,28 @@ div {
 .win-alert-modal {
     z-index: 99;
     position: absolute;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
     text-align: center;
+    font-size: 24px;
     width: 300px;
-    height: 200px;
     border: 4px solid rgb(179, 141, 47);
-    border-radius: 4px;
-    background-color: rgb(29, 32, 34);
+    background-color: rgba(29, 32, 34, 0.80);
+}
+
+.win-alert-modal button {
+    background-color: #292723;
+    width: 100px;
+    height: 35px;
+    border: 2px solid #504e4a;
+    transition: 0.3s;
+}
+
+.win-alert-modal button:hover {
+    background-color: #504e4a;
+}
+
+.win-alert-modal button:active {
+    background-color: #979592;
+    transition: 0.01s;
 }
 
 .visible {
@@ -194,6 +206,7 @@ div {
 
 /* Footer Styles */
 footer {
+    background-color: rgba(29, 32, 34, 0.80);
     padding: 20px;
     text-align: right;
     font-size: 12px;

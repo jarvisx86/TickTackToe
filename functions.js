@@ -85,13 +85,13 @@ function checkForWinCondition() {
     for (let i = 0; i < winValues.length; i++) {
         if (winValues[i] === xWinCondition) {
             gamesWonByX += 1;
-            wonMessage = "The Empire Wins!"
+            wonMessage = "Long live the\nEmpire!"
             break;
         }
 
         if (winValues[i] === oWinCondition) {
             gamesWonByO += 1;
-            wonMessage = "The Rebels Win!"
+            wonMessage = "The force will be\nwith you, always!"
             break;
         }
     }
@@ -128,16 +128,11 @@ function addPointEffect(playerId) {
 
 function displayModal(wonMessage) {
     let winModal = document.getElementById("win-modal");
-    
-    winModal.removeChild(winModal.lastChild);    
-    winModal.className = "win-alert-modal display";
+    winModal.className = "center-items win-alert-modal display";
 
-    let winText = document.createElement("p");
-    
-    winText.innerText = wonMessage;
-    winModal.appendChild(winText);
+    document.getElementById("win-text").innerText = wonMessage;
 }
 
 function closeModal() {
-    document.getElementById("win-modal").className = "win-alert-modal hidden";
+    document.getElementById("win-modal").className = "center-items win-alert-modal hidden";
 }

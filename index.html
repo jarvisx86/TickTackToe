@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="main.css">
     </head>
-    <body>        
+    <body>   
         <header>
             <h1>Star Wars</h1>
             <audio controls autoplay muted loop>
@@ -45,9 +45,16 @@
                     <td id="t9" class="game-box" onclick="clickedSquare('t9')" data-player=""></td>
                 </tr>
             </table>
-            <div id="win-modal" class="win-alert-modal hidden">
-                <button onclick="closeModal()">CLOSE</button>
+
+            <!--    Win Modal Box (hidden by default)     -->
+            <div id="win-modal" class="center-items win-alert-modal hidden">
+                <div>
+                    <p id="win-text"></p>
+                    <div class="spacer"></div>
+                    <button class="close-win-modal" onclick="closeModal()">CLOSE</button>
+                </div>
             </div>
+
         </div>
         
         <div class="spacer"></div>

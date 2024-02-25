@@ -20,8 +20,6 @@ function clearGameBoard() {
 }
 
 function clickedSquare(elementId) {
-
-    console.log()
     if (elementId === null) return;
 
     const gameBoardValue = document.getElementById(elementId);
@@ -50,9 +48,13 @@ function clickedSquare(elementId) {
     checkForWinCondition();
 }
 
-function playSound(soundAsset) {
+function playSound(soundAsset, elementId) {
+    let boardSquare = document.getElementById(elementId);
+    
+    if (boardSquare.lastChild != null) return;
+
     let sound = document.getElementById(soundAsset);
-    sound.currentTime = 0
+    sound.currentTime = 0;
     sound.play();
 }
 

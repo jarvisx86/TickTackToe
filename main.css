@@ -36,9 +36,21 @@ html {
     font-family: star-jedi, Helvetica, sans-serif;
 }
 
-h1 {
-    padding: 20px;
-    background-color: #292723;
+/* body {
+    overflow-x: hidden;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(29, 32, 34, 0.80);
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+header audio {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 div {

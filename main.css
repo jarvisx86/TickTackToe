@@ -1,3 +1,24 @@
+/* founts */
+@font-face {
+    font-family: star-jedi;
+    src: url(fonts/starjedi/Starjedi.ttf);
+}
+
+@font-face {
+    font-family: star-jedi-hollow;
+    src: url(fonts/starjedi/Starjhol.ttf);
+}
+
+@font-face {
+    font-family: star-jedi-outline;
+    src: url(fonts/starjout/Starjout.ttf);
+}
+
+@font-face {
+    font-family: star-jedi-se;
+    src: url(fonts/stjedise/STJEDISE.TTF);
+}
+
 /* Global styles */
 * {
     padding: 0px;
@@ -12,7 +33,7 @@ html {
         rgb(10, 10, 10), 
         #292723
     );
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: star-jedi, Helvetica, sans-serif;
 }
 
 h1 {

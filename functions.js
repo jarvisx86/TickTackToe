@@ -52,12 +52,12 @@ function clickedSquare(elementId) {
 
 function playSound(soundAsset) {
     let sound = document.getElementById(soundAsset);
+    sound.currentTime = 0
     sound.play();
 }
 
 function stopSound(soundAsset) {
     let sound = document.getElementById(soundAsset);
-    console.log("Sound is paused");
     sound.pause();
     sound.currentTime = 0;
 }

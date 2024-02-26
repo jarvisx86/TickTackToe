@@ -36,10 +36,6 @@ html {
     font-family: star-jedi, Helvetica, sans-serif;
 }
 
-/* body {
-    overflow-x: hidden;
-} */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -48,9 +44,12 @@ header {
     padding-right: 25px;
 }
 
-header audio {
-    padding-top: 10px;
-    padding-bottom: 10px;
+header h1 {
+    padding-top: 5px;
+}
+
+header h4 {
+    padding-right: 10px;
 }
 
 div {

@@ -6,10 +6,16 @@
     <body>   
         <header>
             <h1>Star Wars</h1>
-            <audio controls autoplay muted loop>
-                <source src="audio/01 - Star Wars (Main Theme).mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+
+            <!-- audio controlls for background music -->
+            <div class="center-items">
+                <h4>Main Theme</h4>
+                <audio controls autoplay muted loop>
+                    <source src="audio/main-theme.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
         </header>
         <!--    Score Board    -->
         <div class="center-items">
@@ -30,19 +36,19 @@
         <div class="center-items">
             <table class="game-board">
                 <tr>
-                    <td id="t1" class="game-box" onmouseover="playSound('hover-sound', 't1')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t1')" data-player=""></td>
-                    <td id="t2" class="game-box" onmouseover="playSound('hover-sound', 't2')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t2')" data-player=""></td>
-                    <td id="t3" class="game-box" onmouseover="playSound('hover-sound', 't3')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t3')" data-player=""></td>
+                    <td id="t1" class="game-box" onclick="clickedSquare('t1')" data-player=""></td>
+                    <td id="t2" class="game-box" onclick="clickedSquare('t2')" data-player=""></td>
+                    <td id="t3" class="game-box" onclick="clickedSquare('t3')" data-player=""></td>
                 </tr>
                 <tr>
-                    <td id="t4" class="game-box" onmouseover="playSound('hover-sound', 't4')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t4')" data-player=""></td>
-                    <td id="t5" class="game-box" onmouseover="playSound('hover-sound', 't5')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t5')" data-player=""></td>
-                    <td id="t6" class="game-box" onmouseover="playSound('hover-sound', 't6')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t6')" data-player=""></td>
+                    <td id="t4" class="game-box" onclick="clickedSquare('t4')" data-player=""></td>
+                    <td id="t5" class="game-box" onclick="clickedSquare('t5')" data-player=""></td>
+                    <td id="t6" class="game-box" onclick="clickedSquare('t6')" data-player=""></td>
                 </tr>
                 <tr>
-                    <td id="t7" class="game-box" onmouseover="playSound('hover-sound', 't7')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t7')" data-player=""></td>
-                    <td id="t8" class="game-box" onmouseover="playSound('hover-sound', 't8')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t8')" data-player=""></td>
-                    <td id="t9" class="game-box" onmouseover="playSound('hover-sound', 't9')" onmouseout="stopSound('hover-sound')" onclick="clickedSquare('t9')" data-player=""></td>
+                    <td id="t7" class="game-box" onclick="clickedSquare('t7')" data-player=""></td>
+                    <td id="t8" class="game-box" onclick="clickedSquare('t8')" data-player=""></td>
+                    <td id="t9" class="game-box" onclick="clickedSquare('t9')" data-player=""></td>
                 </tr>
             </table>
 
@@ -59,15 +65,30 @@
         
         <div class="spacer"></div>
 
+        <!-- audio sound effects -->
         <div class="center-items">
             <button class="clear-game-button" onclick="clearGameBoard()">RESET</button>
         </div>
         
-        <audio id="hover-sound">
-            <source src="audio/BoardSquareHoverSFX.mp3" type="audio/mpeg">
+        <audio id="clear-sound">
+            <source src="audio/clear-sound.mp3" type="audio/mpeg">
         </audio>
 
+        <audio id="empire-win-sound">
+            <source src="audio/rebel-scum.wav" type="audio/wav">
+        </audio>
+
+        <audio id="rebel-win-sound">
+            <source src="audio/once-a-rebel.wav" type="audio/wav">
+        </audio>
+
+        <audio id="close-modal">
+            <source src="audio/close-modal.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- game logic -->
         <script src="functions.js"></script>
+
     </body>
     <footer>ernst games</footer>
 </html>

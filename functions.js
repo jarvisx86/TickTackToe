@@ -12,6 +12,10 @@ const empireImg = '<img class="board-image" src="img/stormtrooper.png" alt="stor
 const rebelsImg = '<img class="board-image" src="img/rebels.png" alt="rebels"/>';
 
 function clearGameBoard() {
+    let clearSound = document.getElementById('clear-sound');
+    clearSound.currentTime = 0.3;
+    clearSound.play();
+    
     for (let i = 1; i <= numberOfSquares; i++) {
         let playerData = document.getElementById(`t${i}`);
         playerData.innerHTML = "";
@@ -46,22 +50,10 @@ function clickedSquare(elementId) {
 
     document.getElementById(elementId).innerHTML = newGameBoardImg;
     checkForWinCondition();
-}
-
-function playSound(soundAsset, elementId) {
-    let boardSquare = document.getElementById(elementId);
     
-    if (boardSquare.lastChild != null) return;
-
-    let sound = document.getElementById(soundAsset);
-    sound.currentTime = 0;
-    sound.play();
-}
-
-function stopSound(soundAsset) {
-    let sound = document.getElementById(soundAsset);
-    sound.pause();
-    sound.currentTime = 0;
+    let selectSquareSound = document.getElementById("close-modal");
+    selectSquareSound.currentTime = 0;
+    selectSquareSound.play();
 }
 
 function checkForWinCondition() {
@@ -79,12 +71,7 @@ function checkForWinCondition() {
         gameBoardValues[i - 1] = value;
     }
 
-    /* 
-    0 1 2
-    3 4 5
-    6 7 8
-    */
-
+    // check for three in a row
     const winValues = [];
     winValues[0] = `${gameBoardValues[0]}${gameBoardValues[1]}${gameBoardValues[2]}`;
     winValues[1] = `${gameBoardValues[0]}${gameBoardValues[3]}${gameBoardValues[6]}`;
@@ -125,11 +112,15 @@ function updatePlayerScores() {
     if (document.getElementById("score-x").innerText < gamesWonByX) {
         document.getElementById("score-x").innerText = gamesWonByX;
         addPointEffect("score-x");
+        let empireWinSound = document.getElementById("empire-win-sound");
+        empireWinSound.play();
     }
 
     if (document.getElementById("score-o").innerText < gamesWonByO) {
         document.getElementById("score-o").innerText = gamesWonByO;   
         addPointEffect("score-o");
+        let rebelWinSound = document.getElementById("rebel-win-sound");
+        rebelWinSound.play();
     }
 }
 
@@ -148,5 +139,9 @@ function displayModal(wonMessage) {
 }
 
 function closeModal() {
+    let closeModalSound = document.getElementById("close-modal");
+    closeModalSound.currentTime = 0;
+    closeModalSound.play();
+
     document.getElementById("win-modal").className = "center-items win-alert-modal hidden";
 }
